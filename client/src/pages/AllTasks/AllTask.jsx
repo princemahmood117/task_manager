@@ -1,8 +1,9 @@
+import Cards from "../../components/Cards";
 
 const AllTask = () => {
     return (
         <div>
-            <h1>All tasks</h1>
+            <Cards></Cards>
         </div>
     );
 };
