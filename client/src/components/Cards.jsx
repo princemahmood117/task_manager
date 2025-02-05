@@ -1,77 +1,14 @@
-// import { CiHeart } from "react-icons/ci";
-// import { FaRegEdit } from "react-icons/fa";
-// import { MdDeleteForever } from "react-icons/md";
-// const Cards = () => {
-
-//   const data = [
-//     {
-//       title: "The Best Coding Channel",
-//       desc: "I have to create my channel the best ever coding channel in Hindi for those who do not understand English properly.",
-//     },
-//     {
-//       title: "CPP concepts",
-//       desc: "I need to clear basics of Cpp. Topics: Abstraction, Inheritance, Polymorphism, virtual functions etc.",
-//     },
-//     {
-//       title: "Assignment",
-//       desc: "My assignment on 20 March. I have to complete it.",
-//     },
-//     {
-//       title: "Projects",
-//       desc: "For Project I need to see tutorials of the Code Master YouTube channel.",
-//     },
-//   ];
-
-//   console.log(data);
-
-//   return (
-//     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 p-4 ">
-//       { data && data.map((items, index) => (
-//         <div
-//           className="border bg-gray-800 rounded-sm p-3 flex flex-col justify-between"
-//           key={index}
-//         >
-//           <div>
-//             <h3 className="text-xl font-semibold">{items.title}</h3>
-//             <p className="text-gray-300 my-2">{items.desc}</p>
-//           </div>
-
-//           <div className="mt-3 w-full flex items-center">
-//             <button className="bg-red-400 p-2 rounded w-3/6">Incomplete</button>
-
-//             <div className="text-xl p-2 w-3/6 flex justify-around">
-//               <button className="cursor-pointer">
-//                 <CiHeart />
-//               </button>
-//               <button className="cursor-pointer">
-//                 <FaRegEdit />
-//               </button>
-//               <button className="cursor-pointer">
-//                 <MdDeleteForever />
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-
-//       ))}
-
-//       <div className="flex flex-col justify-center items-center bg-gray-500 rounded border border-dashed cursor-pointer">
-//         <h2 className="text-gray-300 font-mono ">Add Task</h2>
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default Cards;
 
 import { CiHeart } from "react-icons/ci";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { motion } from "framer-motion";
-import { useState } from "react";
+
+// import { useState } from "react";
 
 const Cards = () => {
+
+  // this is fake json data, also can use as data.json, then fetch the data from public folder
   const data = [
     {
       title: "Home Work for vacation",
@@ -100,7 +37,7 @@ const Cards = () => {
     },
   ];
 
-  const [importantButton, setImportantButton] = useState("Incomplete");
+//   const [importantButton, setImportantButton] = useState("Incomplete");
 
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 p-4">
