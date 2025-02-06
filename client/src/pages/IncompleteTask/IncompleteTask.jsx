@@ -1,8 +1,9 @@
+import Cards from "../../components/Cards";
 
 const IncompleteTask = () => {
     return (
         <div>
-            <h1>incompleted task</h1>
+            <Cards home={'false'}></Cards>
         </div>
     );
 };

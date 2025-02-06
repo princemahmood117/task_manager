@@ -1,14 +1,9 @@
-
 import { CiHeart } from "react-icons/ci";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { motion } from "framer-motion";
 
-// import { useState } from "react";
-
-const Cards = () => {
-
-  // this is fake json data, also can use as data.json, then fetch the data from public folder
+const Cards = ({ home,setInputDiv }) => {
   const data = [
     {
       title: "Home Work for vacation",
@@ -37,7 +32,6 @@ const Cards = () => {
     },
   ];
 
-//   const [importantButton, setImportantButton] = useState("Incomplete");
 
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 p-4">
@@ -48,7 +42,7 @@ const Cards = () => {
           initial={{ opacity: 0, y: 50 }} // Animation starts hidden and moves up
           animate={{ opacity: 1, y: 0 }} // Moves to visible position
           transition={{ duration: 0.3, delay: index * 0.28 }} // Smooth delay for each card
-        //   whileHover={{ scale: 1.05 }} // Slightly enlarges on hover
+          //   whileHover={{ scale: 1.05 }} // Slightly enlarges on hover
         >
           <div>
             <h3 className="text-xl font-semibold">{items.title}</h3>
@@ -56,7 +50,11 @@ const Cards = () => {
           </div>
 
           <div className="mt-3 w-full flex items-center">
-            <button className={`${items.status === 'Incomplete'? "bg-red-400" : "bg-green-500"} p-2 rounded w-3/6 cursor-pointer hover:scale-105 transition-all duration-300`}>
+            <button
+              className={`${
+                items.status === "Incomplete" ? "bg-red-400" : "bg-green-500"
+              } p-2 rounded w-3/6 cursor-pointer hover:scale-105 transition-all duration-300`}
+            >
               {items.status}
             </button>
 
@@ -76,15 +74,21 @@ const Cards = () => {
       ))}
 
       {/* Add Task Button with Animation */}
-      <motion.div className="flex flex-col justify-center items-center bg-gray-500 rounded border border-dashed cursor-pointer"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-gray-300 font-mono">Add Task</h2>
-      </motion.div>
+
+      {home === "true" && (
+        <motion.button onClick={()=> setInputDiv('fixed')}
+          className="flex flex-col justify-center items-center bg-gray-500 rounded border border-dashed cursor-pointer"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-gray-300 font-mono">Add Task</h2>
+        </motion.button>
+      )}
     </div>
   );
 };
 
 export default Cards;
+
+

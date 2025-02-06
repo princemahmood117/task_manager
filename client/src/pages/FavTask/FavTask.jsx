@@ -1,8 +1,9 @@
+import Cards from "../../components/Cards";
 
 const FavTask = () => {
     return (
         <div>
-            <h1>This is fav task</h1>
+            <Cards home={'false'}></Cards>
         </div>
     );
 };
