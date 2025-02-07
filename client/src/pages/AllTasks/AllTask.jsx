@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const AllTask = () => {
 
-    const [inputDiv,setInputDiv] = useState("hidden")
+    const [inputDiv,setInputDiv] = useState("hidden")  // by default it will be hidden, after click it will be fixed
   return (
     <>
       <div>
