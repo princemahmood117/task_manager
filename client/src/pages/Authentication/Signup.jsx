@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   return (
 
-      <div className="w-full max-w-sm p-6 mt-20 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+      <div className="w-full max-w-sm p-6 mt-[130px] mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div className="flex justify-center">
           <h1 className="text-xl font-sans">Sign up</h1>
         </div>
@@ -64,7 +64,7 @@ const Signup = () => {
 
           <div className="mt-6">
             <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50 cursor-pointer">
-              Sign In
+              Sign Up
             </button>
           </div>
         </form>
@@ -72,7 +72,7 @@ const Signup = () => {
         <div className="flex items-center justify-between mt-4">
           <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
           <span className="text-xs text-center text-gray-500 uppercase dark:text-gray-400">
-            or login with Social Media
+            or login with google
           </span>
           <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/5"></span>
         </div>
@@ -89,7 +89,7 @@ const Signup = () => {
 
         <p className="mt-8 text-xs font-light text-center text-gray-400">
           Alredy have an account?
-          <Link
+          <Link to={'/login'}
             
             className="font-medium text-gray-700 dark:text-gray-200 hover:underline"
           >

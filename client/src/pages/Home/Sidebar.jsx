@@ -43,7 +43,10 @@ const Sidebar = () => {
       </div>
 
       <div>
-        <button className="bg-gray-600 w-full p-2 rounded-xl">Logout</button>
+        {/* <button className="bg-gray-600 w-full p-2 rounded-xl">Logout</button> */}
+        <button to={'/login'} className="bg-gray-600 w-full p-2 mt-2 rounded-xl">
+          <Link to={'/login'}>Login</Link>
+        </button>
       </div>
     </>
   );
