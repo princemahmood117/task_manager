@@ -6,7 +6,7 @@ const connection = async () => {
     const response = await mongoose.connect(`${process.env.MONGO_URI}`);
     
     if (response) {
-      console.log("database connected");
+      console.log("database connected");  // this will show the message when data base will be connected sucessfully
     }
   } 
   catch (error) {

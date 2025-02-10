@@ -13,6 +13,7 @@ router.post("/signup", async (req, res) => {
     const { username } = req.body;
     const { email } = req.body;
 
+    // checks if there is already same username and email is present or not
     const existingUser = await User.findOne({ username: username });
     const existingEmail = await User.findOne({ email: email });
 

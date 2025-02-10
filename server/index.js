@@ -3,7 +3,7 @@ const app = express()
 app.use(express.json())
 
 require('dotenv').config()
-require('./connection/connection')
+require('./connection/connection')   // connecting database with the server from the connection.js file
 
 const cors = require('cors')
 app.use(cors())
