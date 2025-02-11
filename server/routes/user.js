@@ -19,17 +19,19 @@ router.post("/signup", async (req, res) => {
 
     if (existingUser) {
       return res.status(400).json({ message: "Username is already exists" });
-    } else if (username.length < 3) {
+    } 
+    else if (username.length < 4) {
       return res
         .status(400)
-        .json({ message: "Username should be atleast 4 characters" });
+        .json({ message: "Username should be atleast 5 characters" });
     }
 
     if (existingEmail) {
+      // if there is the same email exists, it will send the below message
       return res.status(400).json({ message: "Email is already exists" });
     }
 
-    const hashedPassword = await bcrypt.hash(req.body.password, 10)
+    const hashedPassword = await bcrypt.hash(req.body.password, 10)   // password will be hashed
 
     const newUser = new User({
       username: req.body.username,
@@ -37,10 +39,12 @@ router.post("/signup", async (req, res) => {
       password: hashedPassword,
     });
 
-    await newUser.save();
+    await newUser.save();   // saves the data inside the database
 
     return res.status(200).json({ message: "Login Successfully" });
-  } catch (error) {
+  } 
+  
+  catch (error) {
     console.log(error);
     res.status(400).json({ message: "Internal server error" });
   }
