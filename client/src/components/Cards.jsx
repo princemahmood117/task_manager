@@ -66,7 +66,7 @@ const Cards = ({ home,setInputDiv }) => {
                 <FaRegEdit />
               </button>
               <button className="cursor-pointer">
-                <MdDeleteForever />
+                <MdDeleteForever />  
               </button>
             </div>
           </div>
@@ -75,6 +75,7 @@ const Cards = ({ home,setInputDiv }) => {
 
       {/* Add Task Button with Animation */}
 
+{/* if home = true then it will show the add task button */}
       {home === "true" && (
         <motion.button onClick={()=> setInputDiv('fixed')}
           className="flex flex-col justify-center items-center bg-gray-500 rounded border border-dashed cursor-pointer"
